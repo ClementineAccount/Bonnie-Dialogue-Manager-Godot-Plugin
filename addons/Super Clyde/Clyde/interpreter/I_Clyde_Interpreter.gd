@@ -1,4 +1,4 @@
-class_name ClydeInterpreter
+class_name IClydeInterpreter
 extends RefCounted
 
 const DEFAULT_INDEX = -1
@@ -67,7 +67,7 @@ func init(document_dict : Dictionary, interpreter_options :Dictionary = {}) -> v
 	stack.initialise_stack(doc)
 
 
-func get_current_node():
+func get_current_node() -> ClydeNode:
 	return handle_next_node(stack.stack_head().node)
 
 

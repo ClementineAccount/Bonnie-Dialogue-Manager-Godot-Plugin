@@ -4,10 +4,10 @@ extends RefCounted
 
 var memory : MemoryInterface
 var stack : InterpreterStack
-var interpreter : ClydeInterpreter
+var interpreter : IClydeInterpreter
 
 
-func init(_interpreter : ClydeInterpreter, mem : MemoryInterface, _stack:  InterpreterStack) -> void:
+func init(_interpreter : IClydeInterpreter, mem : MemoryInterface, _stack:  InterpreterStack) -> void:
 	interpreter = _interpreter
 	memory = mem
 	stack = _stack
